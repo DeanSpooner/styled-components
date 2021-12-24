@@ -1,8 +1,13 @@
 import styled, { css } from "styled-components";
 
 const Photo = styled.img`
-  border: 2px solid #dadada;
+  border: 2px solid;
   border-radius: 7px;
+
+  ${(props) =>
+    css`
+      border-color: ${props.border};
+    `};
 
   &:hover {
     outline: none;
